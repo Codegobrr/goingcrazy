@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% block title %} Aftaskool- Enroll Now {% endblock %}
+
+{% block content %}
+<html>
+<head>
+<title> Enroll now </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+<style>
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b> Tuition Classes </b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span>
+        <form action="/enrollClasses">
+      <button class="w3-button w3-black">ALL</button>
+        </form>
+
+        <div class="btn-group">
+         <form action="/pri1class">
+      <button type ="submit" class="w3-button w3-white"> Primary 1 </button>
+         </form>
+
+        <form action="/pri2class">
+      <button class="w3-button w3-white w3-hide-small"> Primary 2  </button>
+        </form>
+
+        <form action="/pri3class">
+      <button class="w3-button w3-white w3-hide-small">Primary 3  </button>
+        </form>
+
+        <form action="/pri4class">
+        <button class="w3-button w3-white w3-hide-small"> Primary 4  </button>
+        </form>
+
+        <form action="/pri5class">
+        <button class="w3-button w3-white w3-hide-small"> Primary 5  </button>
+        </form>
+
+        <form action="/pri6class">
+        <button class="w3-button w3-white w3-hide-small"> Primary 6  </button>
+        </form>
+    </div>
+    </div>
+  </header>
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+        <p><a href="/P1_English_Details"><img src="https://shop.mwti.edu.sg/wp-content/uploads/2021/11/P1-Eng-Stellar-Learning-Sheets.jpg" alt="P1 English" style="width:100%" class="w3-hover-opacity"></a></p>
+      <div class="w3-container w3-white">
+        <h4><b> Primary 1 English </b></h4>
+        <p> AftaSkool's Primary 1 English programme is a perfect way to lay down the groundwork to nurture students into appreciating the langauge and become good speakers.   </p>
+      </div>
+      <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $90 - $100</p>
+        <p>Weekday (*per month): $360</p>
+        <p>Weekend (*per month): $400</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2022/10/5.jpg" alt="P1 Math" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 1 Math </b></h4>
+        <p>  Our Primary 1 Math programme aims to teach basic core mathematical concepts to students through fun hands-on experiences.   </p>
+      </div>
+    <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $115.50 - $125.50</p>
+        <p>Weekday (*per month): $475.50</p>
+        <p>Weekend (*per month): $505.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2021/11/P2-Eng-Stellar-Learning-Sheets.jpg" alt="P2 English" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 2 English </b></h4>
+        <p> Continue to build solid foundations in the English language in areas such as Grammar, Vocabulary and Reading.   </p>
+      </div>
+      <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $115.50 - $125.50</p>
+        <p>Weekday (*per month): $475.50</p>
+        <p>Weekend (*per month): $505.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2022/11/4.jpg" alt="P2 Math" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 2 Math </b></h4>
+        <p> AftaSkool's Primary 2 Math programme helps to introduce difficult concepts to students with our tutors' guidance. </p>
+      </div>
+    <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $115.50 - $125.50</p>
+        <p>Weekday (*per month): $475.50</p>
+        <p>Weekend (*per month): $505.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2021/11/2-1.jpg " alt="P3 English" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 3 English </b></h4>
+        <p> Students will learn effective oral techniques and vocabulary to express themselves through speaking and writing eloquently. .</p>
+      </div>
+    <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $125.50 - $135.50</p>
+        <p>Weekday (*per month): $485.50</p>
+        <p>Weekend (*per month): $515.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2022/11/8.jpg" alt="P3 Math" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 3 Math </b></h4>
+        <p> Explore new topics such as angles, graphs, real world problems and reinforce previously learnt mathematical topics.  .</p>
+      </div>
+       <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $125.50 - $135.50</p>
+        <p>Weekday (*per month): $485.50</p>
+        <p>Weekend (*per month): $515.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="/enrollClasses2" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="/enrollClasses3" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="/enrollClasses2" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+{% endblock %}

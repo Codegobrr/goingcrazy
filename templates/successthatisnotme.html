@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}I want to die internally
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/notme.css') }}">
+<div class=container4>
+<h1 class="display-4">Success</h1>
+</div>
+
+<div class="container3">
+<p>Your ticket number is #{{value}}</p>
+<p>You will hear from us within 3 working days via email, also check your spam inbox in case it is there. </p>
+</div>
+{% endblock %}

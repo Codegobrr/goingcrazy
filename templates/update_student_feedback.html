@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Updating to wanting to die in game and in real life{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelperlmao.html" import render_field %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}">
+
+<form method="POST" action="">
+<!-- Wrapper container -->
+<div class="container py-4">
+
+
+    <!-- Name input -->
+    <div class="form-group">
+    {{ render_field(form.name, class="form-control") }}
+    </div>
+
+    <!-- Gender input -->
+    <div class="form-group">
+    {{ render_field(form.gender, class="form-control") }}
+    </div>
+
+    <!-- Dates input -->
+    <div class="form-group">
+    {{ render_field(form.date, class="form-control datepicker") }}
+    </div>
+
+    <!-- Level input -->
+    <div class="form-group">
+    {{ render_field(form.level, class="form-check", style="list-style-type:none") }}
+    </div>
+
+    <!-- Tutor input -->
+     <div class="form-group">
+    {{ render_field(form.tutor, class="form-control") }}
+    </div>
+
+    <!-- Topic input -->
+    <div class="form-group">
+    {{ render_field(form.topic, class="form-control") }}
+    </div>
+
+    <!-- Rating input -->
+    <div class="form-group">
+    {{ render_field(form.rating, class="form-check", style="list-style-type:none") }}
+    </div>
+
+    <!-- Feedback input -->
+    <div class="form-group">
+    {{ render_field(form.feedback, class="form-control") }}
+    </div>
+
+    <!-- Form submit button -->
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+    </div>
+
+
+
+</div>
+</form>
+{% endblock %}

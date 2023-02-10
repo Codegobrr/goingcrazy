@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap Navbar Dropdown Login and Signup Form with Social Buttons</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a href="#" class="navbar-brand">Brand<b>Name</b></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		{% if current_user.is_authenticated %}
+			{% if current_user.get_type() == "S" %}
+			  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Test</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="student_feedback">Student Feedback</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="lmao">Yeet</a>
+				</li>
+			  </ul>
+			{% elif current_user.get_type() == "T" %}
+			  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <li class="nav-item">
+						<a class="nav-link" href="#">Another Test</a>
+				  </li>
+					<li class="nav-item">
+						<a class="nav-link" href="student_feedback">Aint your feedback</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="lmao">Yeet</a>
+					</li>
+			  </ul>
+			{% elif current_user.get_type() == "A" %}
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <li class="nav-item">
+						<a class="nav-link" href="#">Admin</a>
+				  </li>
+					<li class="nav-item">
+						<a class="nav-link" href="student_feedback">Things</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="update_class">Lmao</a>
+					</li>
+			    </ul>
+
+			{% endif %}
+			<!-- Collapsible wrapper -->
+			  <!-- Avatar -->
+			  <div class="dropdown">
+				  <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">
+				  <img
+					src="https://millercenter.org/sites/default/files/styles/gallery_slider_desktop_2x/public/ig-obama-portrait-800x480.jpg?itok=kWayyf8r"
+					class="rounded-circle"
+					height="25"
+					loading="lazy"
+				  />
+				</a>
+				<ul
+				  class="dropdown-menu dropdown-menu-end"
+				  aria-labelledby="navbarDropdownMenuAvatar"
+				>
+				  <li>
+					<a class="dropdown-item" href="#">My profile</a>
+				  </li>
+				  <li>
+					<a class="dropdown-item" href="#">Settings</a>
+				  </li>
+				  <li>
+					<a class="dropdown-item" href="logout">Logout</a>
+				  </li>
+				</ul>
+			  </div>
+		{% else %}
+		<!-- Collection of nav links, forms, and other content for toggling -->
+			<div class="navbar-nav">
+				<a href="/" class="nav-item nav-link">Home</a>
+
+				<div class="nav-item dropdown">
+					<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Feedback</a>
+					<div class="dropdown-menu">
+						<a href="ticket" class="dropdown-item">Ticket</a>
+						<a href="student_feedback" class="dropdown-item">Lesson Feedback</a>
+						<a href="retrieve_student_feedback" class="dropdown-item">Retrieve Student Feedback</a>
+					</div>
+				</div>
+				<div class="nav-item dropdown">
+					<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Manage Students</a>
+					<div class="dropdown-menu">
+						<a href="/createStudent" class="dropdown-item">Create Student</a>
+						<a href="/retrieveStudent" class="dropdown-item">Retrieve Student</a>
+					</div>
+				</div>
+				<div class="nav-item dropdown">
+					<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Manage Teachers</a>
+					<div class="dropdown-menu">
+						<a href="/createTeacher" class="dropdown-item">Create Teacher</a>
+						<a href="/retrieveTeacher" class="dropdown-item">Retrieve Teacher</a>
+					</div>
+				</div>
+				<a href="/contactUs" class="nav-item nav-link">Contact</a>
+				</div>
+				<div class="navbar-nav ml-auto action-buttons">
+						<a href="/login"  class="nav-item nav-link">Login</a>
+						<a href="/signup"  class="btn btn-primary sign-up-btn">Sign up</a>
+				</div>
+		</div>
+
+		{% endif %}
+	</nav>
+</body>
+</html>

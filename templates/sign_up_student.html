@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %} AftaSkool - Signing up as a student{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelperlmao.html" import render_field %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sign_up_student.css') }}">
+
+
+<body>
+    <h1>Register as a Student </h1>
+
+    <form method="POST" action="">
+        {{ render_field(form.name, class="form-control") }}
+        {{ render_field(form.gender, class="form-check", style="list-style-type:none") }}
+        {{ render_field(form.level, class="form-control") }}
+        {{ render_field(form.parent_name, class="form-control") }}
+        {{ render_field(form.parent_relationship, class="form-control") }}
+        {{ render_field(form.email, class="form-control") }}
+        {{ render_field(form.password, class="form-control") }}
+        {{ render_field(form.retype, class="form-control") }}
+
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+    </div>
+    </form>
+    <a href="/login">Already have an account? Log In</a>
+
+
+</body>
+
+{% endblock %}

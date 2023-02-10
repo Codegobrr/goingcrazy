@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} AftaSkool - Sign Up Page{% endblock %}
+
+{% block content %}
+
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #F4BB44;} /* Mango */
+</style>
+
+<body>
+<br>
+<br>
+<h1> Welcome to AftaSkool! Are you a...</h1>
+
+<button class="button button1" onclick = "document.location='/register_student'"> Student </button>
+<button class="button button2" onclick = "document.location='/register_teacher'"> Teacher </button>
+<button class="button button3"> Administrator </button>
+
+</body>
+
+{% endblock %}

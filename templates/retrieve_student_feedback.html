@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %} Dying in both internally and externally {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/i hate myself.css') }}">
+  <div id="suffer">
+  <h1 class="display-4">Students' Feedback</h1>
+  </div>
+  <div>
+    {% if count == 0 %}
+    <p>There are no student feedbacks.</p>
+    {% elif count == 1 %}
+    <p>There is 1 student feedback.</p>
+    {% else %}
+    <p>There are {{ count }} student feedbacks.</p>
+    {% endif %}
+  </div>
+  <div>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Gender</th>
+        <th>Education Level</th>
+        <th>Name of Tutor</th>
+        <th>Topic</th>
+        <th>Rating</th>
+        <th>Feedback</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for student in sfeedback_list %}
+      <tr>
+        <td>{{ student.get_id() }}</td>
+        <td>{{ student.get_name() }}</td>
+        <td>{{ student.get_day() }}</td>
+        <td>{{ student.get_gender() }}</td>
+        {% if student.get_level() == "P1" %}
+          <td>Primary 1</td>
+        {% elif student.get_level() == "P2" %}
+          <td>Primary 2</td>
+        {% elif student.get_level() == "P3" %}
+          <td>Primary 3</td>
+        {% elif student.get_level() == "P4" %}
+          <td>Primary 4</td>
+        {% elif student.get_level() == "P5" %}
+          <td>Primary 5</td>
+        {% elif student.get_level() == "P6" %}
+          <td>Primary 6</td>
+        {% endif %}
+        <td>{{ student.get_tutor() }}</td>
+        <td>{{ student.get_topic() }}</td>
+        <td>{{ student.get_rating() }}</td>
+        <td>{{ student.get_feedback() }}</td>
+        <td><a href="update_student_feedback/{{student.get_id()}}" class="btn btn-warning">Update</a></td>
+
+        <td>
+          <form action="{{url_for('delete_student_feedback', id=student.get_id())}}" method="POST">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{student.get_id()}}"> Delete </button>
+<!-- The Modal -->
+          <div class="modal"  id="myModal_{{student.get_id()}}">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+      <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Are you sure?</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+      <!-- Modal body -->
+              <div class="modal-body">
+                Huamanity has a consistent record for being idiots despite all the technological advancements we have made. </br> </br>
+                You being a human most probably, are you sure to delete {{student.get_name()}}?
+              </div>
+      <!-- Modal footer -->
+              <div class="modal-footer">
+                <input type="submit" value="Delete" class="btn btn-danger">
+                <button type="button" class="btn btn-danger" id="twitter_cancel" data-bs-dismiss="modal">Cancel</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+      </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+  </div>
+{% endblock %}

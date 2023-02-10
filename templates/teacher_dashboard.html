@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}test test
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+
+    <style>
+   body {
+   text-align:center;
+   }
+
+</style>
+
+</head>
+
+<body>
+
+<h1 class="display-4"> Welcome to the teacher homepage! </h1>
+
+<h2>Hello there {{ first_name }} {{ last_name }}</h2>
+<a href="{{url_for('logout')}}">Press here to logout</a>
+</body>
+{% endblock %}

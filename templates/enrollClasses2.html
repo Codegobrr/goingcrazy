@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block title %} Aftaskool- Enroll Now {% endblock %}
+
+{% block content %}
+<html>
+<head>
+<title> Enroll now </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b> Tuition Classes </b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span>
+      <form action="/enrollClasses">
+      <button class="w3-button w3-black">ALL</button>
+      </form>
+
+       <div class="btn-group">
+         <form action="/pri1class">
+      <button type ="submit" class="w3-button w3-white"> Primary 1 </button>
+         </form>
+
+        <form action="/pri2class">
+      <button class="w3-button w3-white w3-hide-small"> Primary 2  </button>
+        </form>
+
+        <form action="/pri3class">
+      <button class="w3-button w3-white w3-hide-small">Primary 3  </button>
+        </form>
+
+        <form action="/pri4class">
+        <button class="w3-button w3-white w3-hide-small"> Primary 4  </button>
+        </form>
+
+        <form action="/pri5class">
+        <button class="w3-button w3-white w3-hide-small"> Primary 5  </button>
+        </form>
+
+        <form action="/pri6class">
+        <button class="w3-button w3-white w3-hide-small"> Primary 6  </button>
+        </form>
+
+
+    </div>
+    </div>
+ </header>
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2022/11/6-1.jpg" alt="P3 Science" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 3 Science</b></h4>
+        <p> AftaSkool's Primary 3 Science programme introduces students to the wonders of Science, and helps to garner their interest through exciting lessons and topics.  </p>
+      </div>
+          <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $125.50 - $135.50</p>
+        <p>Weekday (*per month): $485.50</p>
+        <p>Weekend (*per month): $515.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2021/11/1-2.jpg" alt="P4 English" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 4 English </b></h4>
+        <p> AftaSkool's Primary 4 English programme helps to ease students into the transition of Upper Primary, with solidifying previous concepts learnt in their lower primary years.    </p>
+      </div>
+        <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $125.50 - $135.50</p>
+        <p>Weekday (*per month): $485.50</p>
+        <p>Weekend (*per month): $515.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container">
+      <img src="https://d3j0t7vrtr92dk.cloudfront.net/agrader/1595317425_17.png" alt="P4 Math" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 4 Math </b></h4>
+        <p> Learn exciting new topics and concepts while strengthening students' foundations from lower primary.    </p>
+      </div>
+         <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $125.50 - $135.50</p>
+        <p>Weekday (*per month): $485.50</p>
+        <p>Weekend (*per month): $515.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2021/11/7-1.jpg" alt="P4 Science" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 4 Science </b></h4>
+        <p> AftaSkool's Primary 4 Science programme continues to develop students' interest in Science, while tackling new concepts and topics.   </p>
+      </div>
+        <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $125.50 - $135.50</p>
+        <p>Weekday (*per month): $485.50</p>
+        <p>Weekend (*per month): $515.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://shop.mwti.edu.sg/wp-content/uploads/2021/11/6-2.jpg" alt="P5 English" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 5 English </b></h4>
+        <p> Start the preparation for PSLE by mastering basic grammar rules and concepts, expanding students' vocabulary and express critical thinking through speaking and writing.   </p>
+      </div>
+        <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $135.50 - $145.50</p>
+        <p>Weekday (*per month): $495.50</p>
+        <p>Weekend (*per month): $520.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container">
+      <img src="https://d3j0t7vrtr92dk.cloudfront.net/agrader/1592284240_%5BDigital%5D%20Mathematics%20-%20Week%2023%20-%20Week%2026%20%286%29.png" alt="P5 Math" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h4><b> Primary 5 Math </b></h4>
+        <p> Get a headstart for PSLE with AftaSkool's Primary 5 Math programme, learning new mathematical concepts such as percentages and ratios.  </p>
+      </div>
+        <div class="w3-container w3-white">
+        <h4><b> Cost: </b></h4>
+        <p>Lesson Duration: 1 hour and 30 minutes</p>
+        <p>Per lesson: $135.50 - $145.50</p>
+        <p>Weekday (*per month): $495.50</p>
+        <p>Weekend (*per month): $520.50</p>
+        <p style="color:Tomato;">* per month refers to 4 lessons. One term has 12 to 14 lessons</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="/enrollClasses" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="/enrollClasses" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="/enrollClasses2" class="w3-bar-item w3-black w3-button">2</a>
+      <a href="/enrollClasses3" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="/enrollClasses3" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+{% endblock %}

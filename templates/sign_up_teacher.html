@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %} AftaSkool - Signing up as a teacher {% endblock %}
+
+{% block content %}
+{% from "includes/_formHelperlmao.html" import render_field %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sign_up_student.css') }}">
+
+
+<style>
+body {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/272/094/original/happy-women-student-gratuated-from-education-background-concept-free-vector.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /*The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.*/
+    background-size: cover; /* 	Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges */
+}
+
+h1 {
+text-align: center;
+}
+form {
+margin: 0 auto;
+width:650px;
+margin: 65px auto 65px auto;   /* horizontal center the element within its container, take up specified width */
+padding: 2em;
+background-color: ghostwhite;
+opacity: 0.95;
+}
+
+</style>
+
+<body>
+<br> <br>
+    <h1 class="display-4" >Register as a Teacher </h1>
+
+        <form method="POST" action="">
+        <div class="form-group">
+        {{ render_field(form.first_name, class="form-control") }}
+        </div>
+        <div class="form-group">
+        {{ render_field(form.last_name, class="form-control") }}
+        </div>
+        <div class="form-group">
+        {{ render_field(form.gender, class="form-check", style="list-style-type:none") }}
+        </div>
+
+        <div class="form-group">
+        {{ render_field(form.educational_level_taught, class="form-control") }}
+        </div>
+
+        <div class="form-group">
+        {{ render_field(form.subjects, class="form-check", style="list-style-type:none") }}
+        </div>
+
+        <div class="form-group">
+        {{ render_field(form.phone_number, class="form-control") }}
+        </div>
+          <div class="form-group">
+        {{ render_field(form.email, class="form-control") }}
+         </div>
+            <div class="form-group">
+        {{ render_field(form.password, class="form-control") }}
+            </div>
+            <div class="form-group">
+        {{ render_field(form.confirm_password, class="form-control") }}
+            </div>
+<br> <br>
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+        <a href="/login">Already have an account? Log In</a>
+    </div>
+    </form>
+
+
+</body>
+
+{% endblock %}
